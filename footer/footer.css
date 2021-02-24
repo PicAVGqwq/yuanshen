@@ -1,0 +1,96 @@
+footer {
+    width: 100%;
+    background-color: #000000;
+}
+
+footer > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111111;
+}
+
+footer > ul > li {
+    padding: .3rem .5rem;
+    list-style: none;
+}
+
+footer > ul i {
+    font-size: .7rem !important;
+    color: #707070;
+    cursor: pointer;
+}
+
+footer > ul > li:hover i {
+    color: white;
+}
+
+#footerContent {
+    width: 100%;
+    padding: .8rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footerContent > div:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+}
+
+#footerContent > div:first-of-type span {
+    width: 0.01rem;
+    height: .8rem;
+    background-color: rgba(180, 180, 180, 0.6);
+    margin: 0 .5rem;
+}
+
+#footerContent > div:first-of-type img {
+    width: 3rem;
+}
+
+#footerContent > div:last-of-type > h3 > a {
+    text-decoration: none;
+    color: white;
+    padding: 0 .2rem;
+}
+
+#footerContent > div:last-of-type > h3 > a:not(:last-of-type) {
+    border-right: 0.05rem white solid;
+}
+
+#footerContent > div:last-of-type a {
+    font-size: .3rem;
+    color: #AAAAAA;
+    text-decoration: none;
+}
+
+#footerContent > div:last-of-type a:hover {
+    color: white;
+}
+
+#footerContent > div:last-of-type > div {
+    margin-top: .8rem;
+    color: #AAAAAA;
+}
+
+#footerContent > div:last-of-type > div > p {
+    font-size: .3rem;
+    line-height: .6rem;
+}
+
+#footerContent > div:last-of-type img {
+    cursor: pointer;
+    margin-top: .3rem;
+    width: 2.5rem;
+    margin-right: .3rem;
+}
+
+footer > i {
+    display: block;
+    width: 100%;
+    height: 1rem;
+    background-color: #111111;
+}

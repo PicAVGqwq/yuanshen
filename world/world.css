@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: .4rem 微软雅黑;
+}
+
+li {
+    list-style: none;
+}
+
+/*数据加载动画*/
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: .1rem;
+    z-index: 1000;
+    background: #fff;
+}
+
+.loading .loading-ele {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: .1rem;
+    background: rgb(105, 224, 255);
+}
+
+/*全屏滚动*/
+#menu {
+    border-right: .05rem rgba(255, 255, 255, 0.2) solid;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    right: 1rem;
+    top: 35%;
+    list-style-type: none;
+    z-index: 70;
+
+}
+
+#menu:before {
+    background: url("../images/world/detailsTop.png") no-repeat;
+    height: .625rem;
+    width: .15rem;
+    content: '';
+    position: absolute;
+    right: -.1rem;
+    top: -.6rem;
+}
+
+#menu:after {
+    background: url("../images/world/detailsTop.png") no-repeat;
+    height: .625rem;
+    width: .15rem;
+    content: '';
+    position: absolute;
+    right: -.1rem;
+    bottom: -.63rem;
+    transform: rotate(180deg);
+}
+
+#menu li {
+    margin: 0 .5rem 0 0;
+}
+
+#menu li .guide__icon {
+    display: block;
+    position: absolute;
+    right: -.6rem;
+    top: .25rem;
+    width: .13rem;
+    height: .13rem;
+    background: #ffffff;
+    transform: rotate(135deg);
+    transition: all .5s;
+}
+
+#menu a {
+    position: relative;
+    float: right;
+    padding: .1rem .15rem .1rem 1.5rem;
+    margin: .2rem 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: .35rem;
+}
+
+#menu li:last-of-type a {
+    opacity: .5;
+}
+
+#menu .active a {
+    color: #283849;
+    background-color: #fff;
+}
+
+#menu .active a .guide__icon {
+    transform: scale(2);
+    background: rgba(254, 211, 159, 0.7);
+}
+
+.section {
+    text-align: center;
+    color: #fff;
+}
+
+.section_last {
+    height: 50% !important;
+}
+
+.section_last div {
+    height: 50% !important;
+}
+
+.mainland {
+    background: url("../images/world/bg1.png") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.mengDe {
+    position: relative;
+    background: url("../images/world/bg2.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.liYue {
+    position: relative;
+    background: url("../images/world/bg3.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+
+/*第一个页面*/
+.mainland > div:first-of-type {
+    text-align: center;
+    position: absolute;
+    top: 6rem;
+    left: 29%;
+}
+
+.mainland > div:first-of-type > div:first-of-type {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: .5rem;
+    position: relative;
+    width: 11rem;
+}
+
+.mainland > div:first-of-type > div:first-of-type i {
+    display: inline-block;
+    width: 100%;
+    height: .45rem;
+    background: url("../images/world/icon1.png") no-repeat;
+    background-size: contain;
+    margin: .5rem 0 0;
+}
+
+.mainland > div:first-of-type > div:first-of-type img {
+    width: 8rem;
+}
+
+.mainland > div:first-of-type div:last-of-type p {
+    line-height: .7rem;
+}
+
+.mainland > div:first-of-type > button {
+    border: 0;
+    background: url("../images/world/titleBg.png") no-repeat;
+    text-shadow: 0 0 .3rem rgba(47, 125, 178, 0.45), 0 0 .3rem rgba(47, 125, 178, 0.45);
+    cursor: pointer;
+    width: 13.85rem;
+    height: 1rem;
+    color: white;
+    font-size: .45rem;
+    margin-top: .3rem;
+    outline: none;
+}
+
+.mainland > div:last-of-type {
+    cursor: pointer;
+    position: absolute;
+    bottom: 74%;
+    left: 48.4%;
+}
+
+.mainland > div:last-of-type div {
+    position: relative;
+    background: url("../images/world/bottom.png") no-repeat;
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+@keyframes Img {
+    from {
+        bottom: 25%;
+        left: 27%;
+    }
+    to {
+        bottom: 13%;
+        left: 27%;
+    }
+}
+
+@keyframes i {
+    0% {
+        transform: scale(.5);
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.mainland > div:last-of-type i {
+    position: absolute;
+    top: -.56rem;
+    left: -.56rem;
+    display: inline-block;
+    background: url("../images/world/bottom1.png");
+    width: 2.45rem;
+    height: 2.45rem;
+    transform: scale(.5);
+    animation: i infinite 1.3s;
+}
+
+.mainland > div:last-of-type div img {
+    position: absolute;
+    bottom: 25%;
+    left: 27%;
+    animation: Img infinite 1s alternate;
+}
+
+.city {
+    text-align: center;
+    position: absolute;
+    top: 19%;
+    left: 23.5%;
+}
+
+.city > img {
+    width: 2.3rem;
+}
+
+.city > div:first-of-type {
+    font-size: .9rem;
+}
+
+.city > div:first-of-type:before {
+    display: inline-block;
+    content: '';
+    background: url("../images/world/titleLeft.png") no-repeat;
+    background-size: 100% 100%;
+    width: 8.5rem;
+    height: .35rem;
+    margin-right: .7rem;
+}
+
+.city > div:first-of-type:after {
+    display: inline-block;
+    content: '';
+    background: url("../images/world/titleLeft.png") no-repeat;
+    background-size: 100% 100%;
+    width: 8.5rem;
+    height: .35rem;
+    transform: rotate(180deg);
+    margin-left: .7rem;
+}
+
+.city > div:last-of-type {
+    width: 16rem;
+    margin: 1em auto;
+}
+
+.city > div:last-of-type p {
+    line-height: .7rem;
+    font-size: .35rem;
+}
+
+.details {
+    cursor: pointer;
+    text-align: center;
+    position: absolute;
+    top: 60.5%;
+    left: 47.5%;
+}
+
+.details > div > i {
+    position: absolute;
+    top: -.55rem;
+    left: -.55rem;
+    display: inline-block;
+    background: url("../images/world/detailsBg.png") no-repeat;
+    width: 2.45rem;
+    height: 2.45rem;
+    transform: scale(.5);
+    animation: i infinite 1.3s;
+}
+
+.details > div > img {
+    width: 1.4rem;
+}
+
+.details > p {
+    margin-top: .4rem;
+    font-size: .3rem;
+}
+
+/*地图详情介绍*/
+.detailsIntroduce {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 18, 18, 0.75);
+    z-index: 100;
+    color: white;
+
+}
+
+.detailsIntroduce > div {
+    position: absolute;
+    top: 12.5%;
+    left: 26.5%;
+    width: 47%;
+    height: 80%;
+}
+
+.detailsIntroduce > div > div:first-of-type {
+    display: flex;
+    width: 100%;
+    height: 1.5rem;
+    justify-content: space-between;
+}
+
+.detailsIntroduce > div > div:first-of-type h3 {
+    display: inline-flex;
+    align-items: center;
+    width: 89%;
+    height: 100%;
+    background: rgba(128, 128, 128, 0.1) url("../images/world/detailsBgg.png") no-repeat left center/auto 100%;
+    font-size: .65rem;
+    padding-left: .5rem;
+}
+
+.detailsIntroduce > div > div:first-of-type button {
+    outline:none;
+    cursor: pointer;
+    border: 0;
+    width: 8%;
+    background: rgba(128, 128, 128, 0.1) url("../images/world/X.png") no-repeat center;
+
+}
+.regionDiv{
+    margin-top: .5rem;
+    overflow: auto;
+    height: 89%;
+    width: 100%;
+}
+.regionDiv::-webkit-scrollbar {
+    width: 0.15rem;
+}
+
+.regionDiv::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.regionDiv::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(65, 65, 65, 0.2);
+}
+.region {
+    width: 89%;
+}
+
+.region h3 {
+    position: relative;
+    font-size: .65rem;
+    border-bottom: .1rem solid rgba(255, 255, 255, 0.1);
+    padding: .4rem 0;
+    margin: .5rem 0;
+}
+
+.region h3:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -.1rem;
+    width: 1.8rem;
+    height: .1rem;
+    background: #cca574;
+}
+
+.region p {
+    font-size: .35rem;
+    line-height: .65rem;
+}
+
+.region img {
+    width: 100%;
+    margin: .5rem 0;
+}
+
+
+
+
+
+
+
+
+
+

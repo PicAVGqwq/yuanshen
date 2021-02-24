@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: .4rem 微软雅黑;
+}
+
+li {
+    list-style: none;
+}
+
+/*数据加载动画*/
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: .1rem;
+    z-index: 1000;
+    background: #fff;
+}
+
+.loading .loading-ele {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: .1rem;
+    background: rgb(105, 224, 255);
+}
+
+/*顶部*/
+.top {
+    background: url("../images/cartoon/bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 13rem;
+    position: relative;
+}
+
+.top > div {
+    position: absolute;
+    top: 30%;
+    left: 9%;
+    color: #333;
+    width: 40%;
+}
+
+.top > div > h3 {
+    font-size: .9rem;
+    margin: .35rem 0;
+}
+
+.top > div > p {
+    font-weight: bolder;
+    line-height: .6rem;
+}
+
+.top > div > a {
+    margin-top: .5rem;
+    display: inline-block;
+    padding: .2rem 1.4rem;
+    border-radius: .1rem;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 192, 255, 0.6);
+}
+
+.catalog {
+    padding: 1rem 0;
+    background: url("../images/cartoon/bg3.jpg") no-repeat;
+    background-size: 100%;
+    width: 100%;
+}
+
+.catalog > div {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.catalog > div > ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.catalog > div > ul > li {
+    position: relative;
+    width: 23%;
+    border-radius: .2rem;
+    overflow: hidden;
+    border: 0.01rem black solid;
+    transition: all .7s;
+    cursor: pointer;
+    margin: 0 .4rem .5rem .2rem;
+}
+
+.catalog > div > ul > li:not(:last-of-type):hover {
+    border: 0.01rem white solid;
+}
+
+.catalog > div > ul > li:not(:last-of-type):hover img {
+    transform: scale(1.2);
+}
+
+.catalog > div > ul > li:not(:last-of-type):hover i {
+    opacity: 0;
+}
+
+.catalog > div > ul > li > img {
+    width: 100%;
+    height: 100%;
+    transition: all .7s;
+}
+
+.catalog > div > ul > li:not(:last-of-type) > h3 {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(17, 17, 17, 0.6);
+    color: white;
+    padding: .15rem 0;
+    font-size: .5rem;
+}
+
+.catalog > div > ul > li:not(:last-of-type) > i {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.20);
+    opacity: 1;
+    transition: all .7s;
+}
+
+
+

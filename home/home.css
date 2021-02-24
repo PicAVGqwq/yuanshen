@@ -1,0 +1,595 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: .4rem 微软雅黑;
+}
+
+/*数据加载动画*/
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: .1rem;
+    z-index: 1000;
+    background: #fff;
+}
+
+.loading .loading-ele {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: .1rem;
+    background: rgb(105, 224, 255);
+}
+
+/*侧边栏*/
+#sidebar {
+    position: fixed;
+    right: 0;
+    top: 23%;
+    z-index: 99;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    transition: all .5s;
+    opacity: 0;
+}
+
+#sidebar > div:first-of-type {
+    width: 4.5rem;
+}
+
+#sidebar h3 {
+    width: 4.5rem;
+    text-align: center;
+    margin: .4rem 0;
+    font-size: .45rem;
+}
+
+#sidebar img {
+    width: 4rem;
+    margin: .1rem 0;
+}
+
+#sidebar p {
+    width: 4.5rem;
+    color: #404040;
+}
+
+#sidebar ul {
+    width: 4.5rem;
+}
+
+#btn {
+    position: absolute;
+    top: 2%;
+    left: -.7rem;
+    width: .7rem;
+    height: 1.2rem;
+    border-radius: .15rem 0 0 .15rem;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FED39F;
+    cursor: pointer;
+}
+
+#btn i {
+    transition: all .7s;
+}
+
+.icon {
+    transform: rotate(180deg) !important;
+}
+
+#sidebar ul li {
+    list-style: none;
+    width: 100%;
+    margin: .2rem 0 .3rem;
+}
+
+#sidebar ul li:hover {
+    background-color: #333333;
+}
+
+#sidebar ul li:hover i {
+    color: #ffd49f;
+}
+
+#sidebar ul li:hover a {
+    color: #ffd49f;
+}
+
+#sidebar ul li i {
+    font-size: .7rem;
+}
+
+#sidebar ul li a {
+    display: flex;
+    height: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #333333;
+    text-decoration: none;
+    font-size: .5rem;
+}
+
+/*封面*/
+#cover {
+    width: 100%;
+    height: 19.75rem;
+    overflow: hidden;
+    position: relative;
+}
+
+#cover > video {
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+}
+
+.subscribe {
+    text-align: center;
+    width: 8.5rem;
+    position: absolute;
+    top: 58%;
+    left: 39%;
+}
+
+.subscribe img {
+    width: 10rem;
+    transform: translateX(-.8rem);
+}
+
+.subscribe > div:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../images/home/playImg.png") no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 1.8rem;
+    margin-bottom: .4rem;
+}
+
+.subscribe > div:first-of-type > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 1.2rem;
+    height: 1.2rem;
+    transform: translateX(0.5px);
+    border-radius: 50%;
+    transition: all .5s;
+}
+
+.subscribe > div:first-of-type .icon-bofanganniu {
+    transform: translateX(.05rem);
+    font-size: .6rem;
+    color: #4B6572;
+}
+
+.subscribe > div:first-of-type > span:hover {
+    background-color: transparent;
+}
+
+.subscribe > div:first-of-type > span:hover .icon-bofanganniu {
+    color: white;
+}
+
+.subscribe > button {
+    margin-top: .3rem;
+    width: 80%;
+    height: 1.5rem;
+    font-size: .7rem;
+    border: 0;
+    background-color: #f3c50d;
+    color: #815a34;
+    line-height: 1.5rem;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 .2rem .15rem 0 rgba(54, 33, 9, 0.3);
+}
+
+.subscribe > p {
+    margin-top: .2rem;
+    color: white;
+}
+
+.subscribe > div:last-of-type {
+    transform: translateY(.5rem);
+    height: 1.5rem;
+}
+
+.subscribe > div:last-of-type ul {
+    height: 100%;
+}
+
+.subscribe > div:last-of-type li {
+    list-style: none;
+}
+
+.subscribe > div:last-of-type li:nth-last-child(2) {
+    transform: translateY(-.5rem);
+}
+
+.subscribe > div:last-of-type li:nth-last-child(1) {
+    transform: translateY(-1rem);
+}
+
+.subscribe > div:last-of-type .icon-fanhui-copy {
+    font-size: .75rem;
+    display: inline-block;
+    color: white;
+}
+
+@keyframes icon1 {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: .5
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes icon2 {
+    0% {
+        opacity: .5
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes icon3 {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: .5
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+#a {
+    animation: icon1 1s infinite;
+}
+
+#b {
+    animation: icon2 1s infinite;
+}
+
+#c {
+    animation: icon3 1s infinite;
+}
+
+/*新闻资讯*/
+#News {
+    background: url("../images/home/29770c4.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 22.5rem;
+    position: relative;
+}
+
+#News > h3 {
+    position: absolute;
+    top: 5rem;
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    width: 80%;
+    left: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#News > h3 > i:first-of-type {
+    display: inline-block;
+    background: url("../images/home/bgTitle.png") no-repeat ;
+    background-size: 100% 100%;
+    width: 10rem;
+    height: .4rem;
+    margin-right: 1rem;
+}
+
+#News > h3 > i:last-of-type {
+    transform: rotate(180deg);
+    display: inline-block;
+    background: url("../images/home/bgTitle.png") no-repeat;
+    background-size: 100% 100%;
+    width: 10rem;
+    height: .4rem;
+    margin-left: 1rem;
+}
+
+.news__main {
+    display: flex;
+    position: absolute;
+    left: 7%;
+    bottom: 19%;
+}
+
+.swiper-container {
+    width: 16rem;
+    height: 10rem;
+}
+
+.swiper-slide {
+    width: 16rem;
+    height: 10rem;
+}
+
+.swiper-slide img {
+    width: 16rem;
+    height: 10rem;
+    cursor: pointer;
+}
+
+.NewsContent {
+    width: 16rem;
+    height: 10rem;
+    background: rgba(38, 18, 12, 0.62);
+}
+
+/*包裹自定义分页器的div的位置等CSS样式*/
+.swiper-pagination-custom {
+    bottom: 1%;
+    left: 0;
+    width: 100%;
+    height: .5rem;
+    text-align: center;
+}
+
+/*自定义分页器的样式*/
+.swiper-pagination-customs {
+    display: inline-block;
+    width: .45rem;
+    height: .45rem;
+    background-color: transparent;
+    border: .05rem rgba(165, 165, 165, 0.51) solid;
+    border-radius: 50%;
+    margin-left: .3rem;
+    box-shadow: 0 0 .3rem 0 rgba(0, 0, 0, 0.3);
+}
+
+/*自定义分页器激活时的样式表现*/
+.swiper-pagination-customs-active {
+    background-color: #fff;
+    border: 0;
+}
+
+.NewsContent {
+    position: relative;
+}
+
+.NewsTitle {
+    display: flex;
+    width: 90%;
+    margin: 5% auto 0;
+    color: white;
+    border-bottom: .08rem solid rgba(255, 255, 255, 0.1);
+}
+
+.NewsTitle li {
+    position: relative;
+    font-size: .5rem;
+    list-style: none;
+    padding: 0 .5rem .4rem;
+    cursor: pointer;
+}
+
+.NewsTitle_after {
+    color: #FED39F;
+}
+
+.NewsTitle_after:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -8%;
+    left: 0;
+    width: 100%;
+    height: .08rem;
+    background-color: #FED39F;
+}
+
+.News {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.NewsContent > a {
+    position: absolute;
+    bottom: 6%;
+    right: 5%;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: .45rem;
+}
+
+.NewsContent > a:hover {
+    color: #FED39F;
+}
+
+.NewsContent > a:hover > i {
+    background-color: rgba(255, 212, 159, 0.2);
+}
+
+.NewsContent > a > i {
+    color: rgba(255, 212, 159, 0.75);
+    font-size: .4rem;
+    border: 0.01rem rgba(255, 212, 159, 0.31) solid;
+    padding: 0.05rem;
+    margin-right: .4rem;
+}
+
+.News li {
+    list-style: none;
+    width: 100%;
+}
+
+.News li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    width: 100%;
+    height: 1.3rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.News li a p:first-of-type {
+    color: white;
+    font-size: .4rem;
+}
+
+.News li a p:last-of-type {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: .35rem;
+}
+
+/*地图*/
+#Map {
+    width: 100%;
+}
+
+#Map > ul {
+    width: 100%;
+}
+
+#Map > ul > li {
+    transition: all .5s;
+    position: relative;
+    width: 100%;
+    height: 6.5rem;
+    overflow: hidden;
+}
+
+#Map > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+#Map > ul > li:last-of-type > a {
+    color: #5B5C5F;
+}
+
+#Map > ul > li:first-of-type > i {
+    transition: all .5s;
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/home/map1.jpg") no-repeat;
+    background-size: 100% 100%;
+
+}
+
+#Map > ul > li:nth-last-child(2) > i {
+    transition: all .5s;
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/home/map2.jpg") no-repeat;
+    background-size: 100% 100%;
+
+}
+
+#Map > ul > li:last-of-type > i {
+    transition: all .5s;
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/home/map3.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.MapName {
+    z-index: 5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: .9rem;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    transition: all .5s;
+}
+
+.MapName:after {
+    opacity: 0;
+    content: "";
+    background: url("../images/home/下载.png");
+    width: 5.25rem;
+    height: .25rem;
+    position: absolute;
+    bottom: 33%;
+}
+
+.MapPeople {
+    transition: all .5s;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.MapPeople img {
+    transition: all .5s;
+    opacity: 0;
+    margin-left: 16rem;
+}
+
+#Map > ul > li > div:last-of-type {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: .15rem rgba(255, 255, 255, 0.9) solid;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#Map > ul > li:hover:not(:last-of-type) > div:last-of-type {
+    opacity: 1;
+}
+
+#Map > ul > li:hover:not(:last-of-type) > i {
+    transform: scale(1.1);
+}
+
+#Map > ul > li:hover:not(:last-of-type) .MapName:after {
+    opacity: 1;
+}
+
+#Map > ul > li:hover:not(:last-of-type) .MapPeople {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#Map > ul > li:hover:not(:last-of-type) .MapPeople img {
+    opacity: 1;
+}

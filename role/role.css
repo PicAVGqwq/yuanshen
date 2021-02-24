@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: .4rem 微软雅黑;
+}
+
+li {
+    list-style: none;
+}
+
+/*数据加载动画*/
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: .1rem;
+    z-index: 1000;
+    background: #fff;
+}
+
+.loading .loading-ele {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: .1rem;
+    background: rgb(105, 224, 255);
+}
+
+@keyframes roleBg {
+    0% {
+        background: url("../images/role/bg1.jpg") no-repeat;
+        background-size: 105% 105%;
+    }
+    30% {
+        background: url("../images/role/bg1.jpg") no-repeat;
+        background-size: 100% 100%;
+    }
+    70% {
+        background: url("../images/role/bg2.jpg") no-repeat;
+        background-size: 100% 100%;
+    }
+    100% {
+        background: url("../images/role/bg2.jpg") no-repeat;
+        background-size: 105% 105%;
+    }
+}
+
+#role {
+    background: url("../images/role/bg1.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 20rem;
+    animation: roleBg infinite 10s alternate;
+    position: relative;
+}
+
+#role > div:last-of-type {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/role/bgg.png") no-repeat;
+    background-size: 110% 100%;
+}
+
+/*侧边栏*/
+.sidebar {
+    padding-top: 4.5rem;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    z-index: 10;
+}
+
+.sidebar:before {
+    position: absolute;
+    top: 0;
+    left: 12%;
+    height: 100%;
+    width: 0.07rem;
+    content: '';
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.sidebar > li {
+    padding: 0 0 0 1.5rem;
+    width: 100%;
+    height: 1.4rem;
+    background: url("../images/role/Unchecked.png") no-repeat .45rem;
+}
+
+.sidebar > li > a {
+    z-index: 100;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    font-size: .45rem;
+}
+
+.sidebar_on {
+    background: url("../images/role/Select.png") no-repeat !important;
+}
+
+.sidebar_on a {
+    padding-left: .4rem;
+}
+
+/*角色列表*/
+.roleTab {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(204, 204, 204, 0.2);
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+    z-index: 10;
+}
+
+.roleTab:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background: url("../images/role/tabBg.png") center bottom repeat no-repeat;
+}
+
+.tabLeft {
+    background: url("../images/role/leftBtn.png") no-repeat;
+    width: 1.1rem;
+    height: 1.6rem;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.tabRight {
+    background: url("../images/role/rightBtn.png") no-repeat;
+    width: 1.1rem;
+    height: 1.6rem;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.role {
+    width: 22rem;
+    overflow: hidden;
+    height: 3.3rem;
+    margin: 0 .8rem;
+    z-index: 1;
+}
+
+.role > ul {
+    display: inline-flex;
+    transition: all .7s;
+}
+
+.role > ul > li {
+
+    cursor: pointer;
+    background: url("../images/role/roleTabBg.png") no-repeat 0 0;
+    width: 2.75rem !important;
+    height: 3.3rem;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    margin: 0 .45rem;
+    padding-top: 0.05rem;
+}
+
+.role > ul > li > img {
+    width: 100%;
+}
+
+.role > ul > li > p {
+    transform: translateY(-.1rem);
+}
+
+.tabLi_on {
+    background-position: 0 -3.3rem !important;
+    color: black !important;
+}
+
+.role > ul > li:hover {
+    background-position: 0 -3.3rem !important;
+    color: black !important;
+}
+
+/*角色介绍*/
+.roleIntroduce {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.roleIntroduce > div:last-of-type {
+    position: absolute;
+    bottom: 0;
+    background: url("../images/role/petal.png") no-repeat;
+    width: 100%;
+    height: 14rem;
+    z-index: 5;
+}
+
+.roleIntroduce > ul > li {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.roleIntroduce > ul > li:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background: url("../images/role/petal.png") no-repeat;
+    width: 100%;
+    height: 14rem;
+    /*z-index: 5;*/
+}
+
+.Introduce {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.Introduce > img:first-of-type {
+    position: absolute;
+    top: 9%;
+    left: 17%;
+    opacity: .2;
+    width: 9rem;
+}
+
+.Introduce > img:last-of-type {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 88%;
+    height: 100%;
+    transition: all 1s;
+    opacity: 0;
+}
+
+.roleDH {
+    opacity: 1 !important;
+    right: -5% !important;
+}
+
+.Introduce1 {
+    position: absolute;
+    left: 22%;
+    top: 20%;
+    z-index: 5;
+}
+
+.Introduce1:before {
+    display: block;
+    content: '';
+    width: 4.5rem;
+    height: .1rem;
+    background: #e3bc8c;
+}
+
+.Introduce1 > img {
+    margin-top: .5rem;
+    width: 10rem;
+}
+
+.Introduce1 > div:first-of-type {
+    transform: translateY(-.9em);
+    display: flex;
+    align-items: center;
+    background: #cca574 url("../images/role/CVname.jpg") no-repeat;
+    height: 1.35rem;
+    width: 8rem;
+    padding-left: 1.6rem;
+}
+
+.Introduce1 > div:first-of-type > div:first-of-type {
+    font-size: .6rem;
+    color: #24333c;
+}
+
+.Introduce1 > div:first-of-type > div:first-of-type > span {
+    font-size: .6rem;
+}
+
+.audio_on_off {
+    cursor: pointer;
+    position: absolute;
+    right: -.1rem;
+    background: url("../images/role/audio.png") no-repeat;
+    background-size: cover;
+    width: 1.55rem;
+    height: 1.55rem;
+}
+
+.audio_on_off > i {
+    display: none;
+    width: 99%;
+    height: 99%;
+    background: url("../images/role/audio1.gif") no-repeat;
+    position: absolute;
+    top: -.2rem;
+    right: .25rem;
+}
+
+.Introduce1 > div:first-of-type > div:last-of-type {
+    cursor: pointer;
+    position: absolute;
+    right: -3rem;
+    width: 2.05rem;
+    height: .9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: .5rem;
+    background: rgba(18, 18, 18, 0.5);
+    padding: 0 .05rem;
+}
+
+.Introduce1 > div:first-of-type > div:last-of-type p {
+    text-align: center;
+    width: .65rem;
+    height: .65rem;
+    font-size: 0;
+    color: #dbb17d;
+    background: #dbb17d;
+    border-radius: 50%;
+}
+
+.audio_on {
+    font-size: .5rem !important;
+    background: none !important;
+}
+
+.Introduce1 > div:last-of-type {
+    position: relative;
+    padding: .25rem .2rem .25rem 1.5rem;
+    color: white;
+    width: 13.75rem;
+    height: 3.7rem;
+    background: rgba(1, 1, 1, 0.5);
+    margin-top: .5rem;
+
+}
+
+.Introduce1 > div:last-of-type > div {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    padding-right: .35rem;
+}
+
+.Introduce1 > div:last-of-type > div::-webkit-scrollbar {
+    width: 0.1rem;
+}
+
+.Introduce1 > div:last-of-type > div::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.51);
+}
+
+.Introduce1 > div:last-of-type > div::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(65, 65, 65, 0.2);
+}
+
+.Introduce1 > div:last-of-type > i {
+    display: inline-block;
+    background: url("../images/role/introduce.png") no-repeat;
+    width: .5rem;
+    height: .5rem;
+    position: absolute;
+    top: 10%;
+    left: 2.5%;
+}
+
+.Introduce1 > div:last-of-type > div > p {
+    line-height: .65rem;
+}
+
+
+
+
+
+

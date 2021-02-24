@@ -1,0 +1,199 @@
+#nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 1.65rem;
+    background-color: rgba(17, 17, 17, 0.75);
+    display: flex;
+    align-items: center;
+    z-index: 11;
+}
+
+#music {
+    display: inline-block;
+    width: .75rem;
+    height: .75rem;
+    margin-left: .60rem;
+    cursor: pointer;
+}
+
+#bgLogo {
+    background: url("../images/nav/logo.png") no-repeat -1.15rem;
+    background-size: 150% 100%;
+    width: 6rem;
+    height: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin-left: .4rem;
+    width: 35%;
+}
+
+.menu-item {
+    position: relative;
+    height: 100%;
+}
+
+.menu-item a {
+    font-size: .41rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-decoration: none;
+    color: #ccc;
+    width: auto;
+}
+
+.menu .menu-item .wee {
+    height: .125rem;
+    width: 100%;
+    background-color: rgb(105, 224, 255);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+}
+
+.menu .current-menu-item a {
+    color: #fff;
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+}
+
+.menu .menu-item:hover a {
+    color: #fff;
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+}
+
+#sign_in {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    width: 2rem;
+}
+
+#sign_in button {
+    background-color: rgba(204, 204, 204, 0);
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    color: #cccccc;
+    cursor: pointer;
+}
+
+#sign_in button img {
+    width: .67rem;
+    height: .67rem;
+    opacity: .75;
+}
+
+#sign_in button span {
+    font-size: .45rem;
+    font-family: 楷体;
+}
+
+#sign_in button:hover img {
+    opacity: 1;
+}
+
+#sign_in button:hover span {
+    color: #fff;
+}
+
+/*登录*/
+article {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7) !important;
+    /*display: none;*/
+}
+
+article > div {
+    width: 13rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+article > div > img {
+    margin-top: 1.5rem;
+    width: 4.5rem;
+}
+
+.sing_in {
+    position: relative;
+    background: url("../images/Sign_in/dbefad7.png") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+}
+
+.sing_in > i {
+    cursor: pointer;
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    display: block;
+    background: url("../images/Sign_in/1c0b421.png") no-repeat 87.168% 67.901%;
+    background-size: 3.2rem 2.4rem;
+    width: .4rem;
+    height: .4rem;
+    transform: scale(1.5);
+}
+
+.sing_in > i:hover {
+    background: url('../images/Sign_in/1c0b421.png') no-repeat 87.168% 43.21%;
+    background-size: 3.2rem 2.4rem;
+    width: .4rem;
+    height: .4rem;
+}
+.menu1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu1 .menu-item1 {
+    position: relative;
+    cursor: pointer;
+}
+
+.menu1 .menu-item1 .wee1 {
+    height: .1rem;
+    width: 100%;
+    background-color: #ce965f;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+}
+
+.menu1 .menu-item1 h3 {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #232323;
+    transition: 0.3s;
+}
+
+.menu1 .menu-item1:hover h3 { color: #ce965f; }
+
+.menu1 .current-menu-item1 h3 { color: #ce965f; }
+
+
+
+
+
